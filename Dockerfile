@@ -40,7 +40,7 @@ ENV container docker
 
 RUN /usr/sbin/sshd-keygen
 RUN echo 'root:PLEASE_CHANGE_ROOT_PASSWORD' | chpasswd
-COPY ./screen /usr/bin/
+COPY /screen /usr/bin/
 RUN chmod +x /usr/bin/screen
 RUN echo 'defshell -bash' >> /root/.screenrc
 EXPOSE 22
