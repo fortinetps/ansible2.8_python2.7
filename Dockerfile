@@ -11,10 +11,7 @@ USER root
 RUN yum -y update \
 &&  yum clean all \
 &&  yum -y install epel-release \
-&&  yum -y install openssh-server \
-&&  yum -y install git \
-&&  yum -y install net-tools \
-&&  yum -y install initscripts
+&&  yum -y install openssh-server git net-tools initscripts nfs-utils
 
 # Workaround for running SSH Server
 # https://qiita.com/ShikiSouma/items/8a47082e0067e102c5c4
